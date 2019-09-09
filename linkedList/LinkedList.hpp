@@ -41,6 +41,19 @@ bool LinkedList<T>::search(T value) const
 	Node<T>* temp = m_front;
 	bool isFound = false;
 
+	for(int l = 0; l < m_size; l++)
+{
+if(temp->getValue() == value)
+{
+isFound = true;
+break;
+}
+else if(temp->getValue() != value)
+{
+temp = temp->getNext();
+}
+}
+
 	/** TODO
 		Fix this method
 	*/
